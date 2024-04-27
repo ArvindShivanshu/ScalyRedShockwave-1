@@ -388,7 +388,7 @@ def handle_all_commands(message):
     bot_username = bot.get_me().username
 
     userData = db.users.find_one({'user_id':user_id})
-    balance = userData.get('balance', 0)
+    balance = userData.get('balance', 2)
     total_referral = userData.get('total_ref', 0)
     ref_link = f"https://telegram.me/{bot_username}?start={user_id}"
     status = userData.get('status',None)
