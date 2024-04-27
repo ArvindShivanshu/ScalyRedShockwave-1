@@ -498,7 +498,7 @@ def ref_bons(user_id):
 
     referred_by =  userData.get("ref_by", None) 
     referred = userData.get("referred",None)
-    ref_bonus = random.randint(1, 2)
+    ref_bonus = random.randint(2, 2)
 
 
     if referred_by != "none" and referred == None:
