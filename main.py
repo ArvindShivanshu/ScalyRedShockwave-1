@@ -72,7 +72,7 @@ def menu_markup():
 
 def menu(user_id):
 
-    start_message = (f"<b>Welcome to Uᴘɪ Cᴀsʜ Iɴsᴛᴀɴᴛ World ❤️\n\n"
+    start_message = (f"<b>Welcome to Uᴘɪ Cᴀsʜ Iɴsᴛᴀɴᴛ  ❤️\n\n"
     "Choose Given Button To Earn....!! </b>")
 
     bot.send_message(chat_id=user_id, text= start_message,reply_markup=menu_markup(),parse_mode="HTML")
