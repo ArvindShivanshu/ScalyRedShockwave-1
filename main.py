@@ -311,19 +311,22 @@ def send_join_message(message):
     if not h:
         join_markup = types.InlineKeyboardMarkup()
         join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/+2bHVGGNVNdUxNDA1"),
-            types.InlineKeyboardButton(text="Join", url="https://t.me/+lJA5rkvk1UtiMmFl")
+            types.InlineKeyboardButton(text="Join", url="https://t.me/yash_hacking_1"),
+            types.InlineKeyboardButton(text="Join", url="https://t.me/Bot_Making_Tips")
         )
         join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/+TsEZ3Lvczik0OTFl"),
-            types.InlineKeyboardButton(text="Join", url="https://t.me/joinxyza")
+            types.InlineKeyboardButton(text="Join", url="https://t.me/Newrummy_casino"),
+            types.InlineKeyboardButton(text="Join", url="https://t.me/+LChQC1JQf-xhN2Nk")
         )
         join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/joinxyza"),
-            types.InlineKeyboardButton(text="Join", url="https://t.me/joinxyza")
+            types.InlineKeyboardButton(text="Join", url="https://t.me/Dream99_Games"),
+            types.InlineKeyboardButton(text="Join", url="https://t.me/+4-vBoP8h6SA2NjM1")
         )
+        #join_markup.row(
+            #types.InlineKeyboardButton(text="Join here first", url="https://t.me/joinxyza")  
+        #)
         
-        join_markup.row(types.InlineKeyboardButton(text="Verify", callback_data="verify"))
+        join_markup.row(types.InlineKeyboardButton(text="Claim ✅", callback_data="verify"))
 
         bot.send_message(user_id, "*Must Join Our All channels before continue*", parse_mode='Markdown', reply_markup=join_markup)
         send_hindi_message(user_id)
