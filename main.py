@@ -142,7 +142,8 @@ def deduct_balance_admin(message):
     user_id = message.text.split()[1]
     amount = message.text.split()[2]
 
-    db.users.update_one({'user_id':int(user_id)}, {'$inc':{'balance':-float(amount)}}, upsert=True)
+    db.users.update_one({'user_id':int(user_id)},
+                        {'$inc':{'balance':-float(amount)}}, upsert=True)
 
     bot.send_message(message.chat.id, f"Deducted {amount} INR from user {user_id}'s balance. Their new balance is {db.users.find_one({'user_id':int(user_id)})['balance']} INR")
 
