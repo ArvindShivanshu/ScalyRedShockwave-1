@@ -530,7 +530,7 @@ def send_withdraw(message, amount, upi):
         db.users.update_one({'user_id': user_id}, {'$inc': {'balance': amount}}, upsert=True)
         return
 
-    bot.send_message(user_id, f"<b>Withdraw Success!!</b>", parse_mode='html')
+    bot.send_message(user_id, f"<b>Withdraw Success!! \n\n 10% Has been deducted from withdral balance Because of Api Provider Fees.\n\n\n Developer - @Future_here_now</b>", parse_mode='html')
 
     bot.send_message(payment_channel, f"User Id: {message.chat.id}\nUser FirstName: {message.chat.first_name}\nUserName: @{message.chat.username}\nAmount: {amount_to_send}\nUPI: {upi}\nResponse: {data.text}\nOrderId: {orderid}")
 
