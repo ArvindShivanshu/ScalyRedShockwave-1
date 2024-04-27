@@ -510,30 +510,29 @@ def ref_bons(user_id):
         bot.send_message(referred_by, f"*➕ {ref_bonus} INR For New Referral*",parse_mode="markdown")
 
     #### end ####
-
-def send_withdraw(message,amount,upi):
+def send_withdraw(message, amount, upi):
     orderid = str(uuid.uuid4().int)[:10]
     user_id = message.chat.id
     name = message.chat.first_name
     comment = f"{bot.get_me().username}"
-    
-    
-    
-    url = f"https://full2sms.in/api/v2/payout?mid=cFOslg3B4nZm2KjkwzWUbto7T&mkey=g7TmlIcZdXfRPCr4i15GJ3p6Q&guid=gckX20Pwy5nYdLpZleAJDvHBW&type=upi&amount={amount}&upi={upi}&info=telebot"
+
+    # Deduct 10% from the amount
+    amount_to_send = amount * 0.9
+
+    url = f"https://full2sms.in/api/v2/payout?mid=dYETiuRZGavq35JBhkx68LU42&mkey=z6DeCSPFhOuwbNnQkmfVJZaX4&guid=QB9xFHnMZ6OaVGu1TNJArUWRX&type=upi&amount={amount_to_send}&upi={upi}&info=telebot"
 
     data = requests.get(url)
 
     if data.json()['status'] == 'failed':
-        bot.send_message(user_id,"Try Again..")
-        bot.send_message(admin_chat_id,f"Response: {data.text}\nOrderId: {orderid}")
+        bot.send_message(user_id, "Try Again..")
+        bot.send_message(admin_chat_id, f"Response: {data.text}\nOrderId: {orderid}")
 
-        db.users.update_one({'user_id':user_id},{'$inc':{'balance':amount}},upsert=True)
+        db.users.update_one({'user_id': user_id}, {'$inc': {'balance': amount}}, upsert=True)
         return
 
-    bot.send_message(user_id,f"<b>Withdraw Success!!</b>",parse_mode='html')
+    bot.send_message(user_id, f"<b>Withdraw Success!!</b>", parse_mode='html')
 
-    bot.send_message(payment_channel,f"User Id: {message.chat.id}\nUser FirstName: {message.chat.first_name}\nUserName: @{message.chat.username}\nAmount: {amount}\nUPI: {upi}\nResponse: {data.text}\nOrderId: {orderid}")
-
+    bot.send_message(payment_channel, f"User Id: {message.chat.id}\nUser FirstName: {message.chat.first_name}\nUserName: @{message.chat.username}\nAmount: {amount_to_send}\nUPI: {upi}\nResponse: {data.text}\nOrderId: {orderid}")
 
 
 # bot.polling()
