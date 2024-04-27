@@ -52,8 +52,8 @@ def is_chat_member(user_id):
 
 
 buttons = {
-    'balance_btn': 'Check Balance',
-    'referral_btn': 'Invite Users',
+    'balance_btn': 'Balance',
+    'referral_btn': 'Refer And Earn',
     'withdraw_btn': 'Withdraw',
     'back_btn': 'BACK'
 }
