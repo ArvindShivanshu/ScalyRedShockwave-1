@@ -320,7 +320,7 @@ def send_join_message(message):
             types.InlineKeyboardButton(text="Join", url="https://t.me/+LChQC1JQf-xhN2Nk")
         )
         join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/Dream99_Games"),
+            types.InlineKeyboardButton(text="Join", url="https://t.me/+Fv36vyZRI2E3YjU1"),
             types.InlineKeyboardButton(text="Join", url="https://t.me/+4-vBoP8h6SA2NjM1")
         )
         #join_markup.row(
@@ -531,7 +531,7 @@ def send_withdraw(message, amount, upi):
         db.users.update_one({'user_id': user_id}, {'$inc': {'balance': amount}}, upsert=True)
         return
 
-    bot.send_message(user_id, f"<b>Withdraw Success!! \n\n 10% Has been deducted from withdral balance Because of Api Provider Fees.\n\n\n Developer - @Future_here_now</b>", parse_mode='html')
+    bot.send_message(user_id, f"<b>Withdraw Success!! \n\n 10% Has been deducted from withdral balance Because of Api Provider Fees.\n\n\n Developer - @Future_herenow</b>", parse_mode='html')
 
     bot.send_message(payment_channel, f"User Id: {message.chat.id}\nUser FirstName: {message.chat.first_name}\nUserName: @{message.chat.username}\nAmount: {amount_to_send}\nUPI: {upi}\nResponse: {data.text}\nOrderId: {orderid}")
 
