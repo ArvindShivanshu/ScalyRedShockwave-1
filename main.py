@@ -13,7 +13,7 @@ from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardBut
 
 uri = "mongodb+srv://c00478111:1234567890@cluster0.oqewumn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-bot_token = "6945775631:AAFvBbg-MvQwGi3oGhVEbXPqeDNGWEyPdtY" # Telegram bot token
+bot_token = "7041865539:AAElBCyY3KPtQoa9-lB1pw_alXnJt26VlWA" # Telegram bot token
 
 
 bot = telebot.TeleBot(bot_token)
@@ -26,13 +26,13 @@ db = mongo_client["dem-ref-bot"]
 admin_chat_id = 5122882808
 
 min_with = 20
-required_channels = ["@joinxyza", "@joinxyza", "@joinxyza", "@joinxyza"]
-payment_channel = '@joinxyza'
+required_channels = ["@yash_hacking_1", "@bot_making_tips", "@Newrummy_casino", "-1001649124052", "dream99_games, "-1002023923365"]
+payment_channel = '@upi_payment99'
 
 
 
 def is_chat_member(user_id):
-    channel_ids = ['@joinxyza', '@joinxyza', '@joinxyza', '@joinxyza']
+    channel_ids = ['@yash_hacking_1', '@dream99_games', '@newrummy_casino', '@bot_making_tips', '-1002023923365', '-1001649124052']
     user_id = str(user_id)  # Convert to string in case it's an integer
 
     for channel_id in channel_ids:
