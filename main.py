@@ -312,17 +312,14 @@ def send_join_message(message):
     if not h:
         join_markup = types.InlineKeyboardMarkup()
         join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/yash_hacking_1"),
-            types.InlineKeyboardButton(text="Join", url="https://t.me/Bot_Making_Tips")
+            types.InlineKeyboardButton(text="Join", url="https://t.me/+2bHVGGNVNdUxNDA1"),
+            types.InlineKeyboardButton(text="Join", url="https://t.me/+EGFoyv1BWWplODll")
         )
         join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/Newrummy_casino"),
-            types.InlineKeyboardButton(text="Join", url="https://t.me/+LChQC1JQf-xhN2Nk")
+            types.InlineKeyboardButton(text="Join", url="https://t.me/+lJA5rkvk1UtiMmFl"),
+            types.InlineKeyboardButton(text="Join", url="https://t.me/earnteach")
         )
-        join_markup.row(
-            types.InlineKeyboardButton(text="Join", url="https://t.me/+Fv36vyZRI2E3YjU1"),
-            types.InlineKeyboardButton(text="Join", url="https://t.me/+4-vBoP8h6SA2NjM1")
-        )
+        
         #join_markup.row(
             #types.InlineKeyboardButton(text="Join here first", url="https://t.me/joinxyza")  
         #)
