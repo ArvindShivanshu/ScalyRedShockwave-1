@@ -13,7 +13,7 @@ from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardBut
 
 uri = "mongodb+srv://c00478111:1234567890@cluster0.oqewumn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-bot_token = "7041865539:AAElBCyY3KPtQoa9-lB1pw_alXnJt26VlWA" # Telegram bot token
+bot_token = "6945775631:AAHEbIyLgaqZeM1gB4TBuWfL-Gbqp3XuxJY" # Telegram bot token
 
 
 bot = telebot.TeleBot(bot_token)
@@ -26,8 +26,8 @@ db = mongo_client["dem-ref-bot"]
 admin_chat_id = 5122882808
 
 min_with = 20
-required_channels = ["@yash_hacking_1", "@bot_making_tips", "@Newrummy_casino", "-1002023923365"]
-payment_channel = '@upi_payment99'
+required_channels = ["-1001871612441", "-1001914613911",]
+payment_channel = '@testingherefromfuture'
 
 
 
